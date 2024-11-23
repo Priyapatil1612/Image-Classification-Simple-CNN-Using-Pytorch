@@ -45,3 +45,37 @@ Layer: Fully connected layer with 4 output features corresponding to the number 
 | Fully Connected (128) | 3136 | 128 | 3136x128+128 = 401536 |
 | Fully Connected (4) | 128 | 4 | 128x4+4 = 516 |
 
+### Total Trainable Parameters
+The total number of parameters in the model is 420,868.
+
+### Project Highlights
+This project showcases the following key features and capabilities:
+##### Data Preprocessing:
+The OCTMNIST dataset is preprocessed using normalization to scale pixel intensities to a [0, 1] range.
+Data augmentation techniques (such as flipping and rotation) are optionally applied to enhance generalization.
+##### Custom SimpleCNN Model:
+A lightweight CNN architecture designed to efficiently classify grayscale OCT images.
+Includes ReLU activations, max-pooling layers for dimensionality reduction, and fully connected layers for classification.
+##### Efficient Training and Evaluation:
+Supports training with adjustable hyperparameters such as learning rate, batch size, and number of epochs.
+Evaluates model performance using standard metrics like accuracy and confusion matrix.
+##### Visualization Tools:
+Provides insightful visualizations of training and validation loss and accuracy curves to monitor model performance.
+Includes confusion matrices and classification reports for detailed evaluation.
+##### Reproducibility:
+The code is modular and organized for easy replication of experiments.
+Preprocessing, training, and evaluation are well-documented and easy to customize.
+##### Applications:
+Demonstrates potential for real-world medical imaging applications, highlighting the role of CNNs in healthcare technology.
+
+### Requirements
+
+Python 3.x
+PyTorch
+torchvision
+matplotlib
+numpy
+scikit-learn
+MedMNIST package (for dataset handling)
+
+### Install the dependencies using:
