@@ -36,11 +36,12 @@ Layer: Fully connected layer with 4 output features corresponding to the number 
 
 ### Summary of Layers
 
-| Column 1 Header | Column 2 Header | Column 3 Header |
-|------------------|------------------|------------------|
-| Row 1, Col 1     | Row 1, Col 2     | Row 1, Col 3     |
-| Row 2, Col 1     | Row 2, Col 2     | Row 2, Col 3     |
-| Row 3, Col 1     | Row 3, Col 2     | Row 3, Col 3     |
-
-
+| Layer Type | Input Shape | Output Shape | Parameters |
+|------------------|------------------|------------------|------------------|
+| Convo2D (32 channels) | 1x28x28 | 32x28x28 | 32x(1x3x3+1) = 320|
+| MaxPool2D | 32x28x28 | 32x14x14 | 0 |
+| Convo2D (64 channels) | 32x14x14 | 64x14x14 | 64x(32x3x3+1) = 18496 |
+| MaxPool2D | 64x14x14 | 64x7x7 | 0 |
+| Fully Connected (128) | 3136 | 128 | 3136x128+128 = 401536 |
+| Fully Connected (4) | 128 | 4 | 128x4+4 = 516 |
 
